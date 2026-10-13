@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#07162b">
+<title>Laberinto 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <canvas id="scene" aria-label="Juego Laberinto 3D"></canvas>
+  <header>
+    <button id="pause" aria-label="Pausar">Ⅱ</button>
+    <div>NIVEL <b id="level">1</b>/5</div>
+    <div>MONEDAS <b id="coins">0</b></div>
+    <div>TIEMPO <b id="time">0:00</b></div>
+  </header>
+  <section id="start" class="overlay">
+    <h1>LABERINTO <span>3D</span></h1>
+    <p>Supera 5 laberintos, abre cofres, encuentra llaves y descubre puertas secretas.</p>
+    <button id="play" class="primary">JUGAR</button>
+    <small>Joystick táctil o desliza sobre el juego.<br>¡Cada nivel será más grande y tendrá nuevas trampas!</small>
+    <p class="best">MEJOR TIEMPO: <b id="bestStart">—</b></p>
+  </section>
+  <section id="message" class="overlay hidden">
+    <div class="card"><h2 id="msgTitle">¡ESCAPASTE!</h2><p id="msgText"></p>
+      <button id="retry" class="primary">VOLVER A JUGAR</button>
+      <button id="home" class="secondary">MENÚ</button>
+    </div>
+  </section>
+  <div id="joystick" class="joystick" aria-label="Joystick virtual">
+    <div class="joy-ring"><div id="stick" class="stick"></div></div>
+    <span>MOVER</span>
+  </div>
+  <div class="controls-hint">BUSCA LLAVES, MONEDAS Y LA SALIDA</div>
+</main>
+<script type="module" src="game.js"></script>
+</body>
+</html>

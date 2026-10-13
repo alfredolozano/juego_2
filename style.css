@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#07162b;color:white;font-family:system-ui,Arial;touch-action:none}
+#app{height:100dvh;width:100%;position:relative;overflow:hidden;background:#132c3b}
+canvas{width:100%;height:100%;display:block}
+header{position:absolute;top:env(safe-area-inset-top,8px);left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:10px;gap:8px;pointer-events:none}
+header div,header button{background:#07162be8;border:1px solid #ffffff40;border-radius:12px;padding:10px 12px;font-size:13px;font-weight:800}
+header button{color:white;font-size:21px;pointer-events:auto}
+header b{color:#ffd34e;margin-left:5px}
+.overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(#07162b55,#07162bea);backdrop-filter:blur(3px)}
+.hidden{display:none!important}
+h1{font-size:clamp(40px,11vw,65px);font-weight:1000;font-style:italic;line-height:.9;color:#ffd43b;text-shadow:0 4px #a34f00,0 8px #00152d;margin:0}
+h1 span{display:block;color:#20c5ff;text-shadow:0 4px #0870a9,0 8px #00152d}
+.overlay p{max-width:330px;line-height:1.5;font-weight:650}
+.primary,.secondary{border:0;border-radius:14px;padding:15px 28px;font-weight:950;font-size:18px;min-width:210px}
+.primary{color:#063018;background:linear-gradient(#c8ff68,#54e936);box-shadow:0 5px #269820;margin:12px}
+.secondary{color:white;background:#ffffff1c;border:1px solid #ffffff50;margin-top:8px}
+.overlay small{margin-top:22px;color:#cdefff;line-height:1.6}
+.best{font-size:12px;letter-spacing:1px}
+.card{background:#07162bf2;border:1px solid #ffffff35;border-radius:22px;padding:26px;width:min(100%,340px)}
+.card h2{margin-top:0}
+.joystick{position:absolute;left:18px;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);width:132px;display:flex;flex-direction:column;align-items:center;gap:5px;touch-action:none;user-select:none}
+.joy-ring{width:116px;height:116px;border-radius:50%;border:2px solid #ffffff75;background:#07162b9c;box-shadow:inset 0 0 18px #ffffff12,0 5px 16px #00152d55;display:flex;align-items:center;justify-content:center;touch-action:none}
+.stick{width:48px;height:48px;border-radius:50%;border:2px solid #ffffffb0;background:linear-gradient(145deg,#eaf6ff,#829bb4);box-shadow:0 4px 12px #0008;transform:translate(0,0);will-change:transform}
+.joystick span{font-size:9px;letter-spacing:2px;color:#ffffffb5;font-weight:800}
+.controls-hint{position:absolute;bottom:6px;left:0;right:0;text-align:center;font-size:9px;letter-spacing:2px;color:#ffffff8c;pointer-events:none}
+@media(min-width:650px){#app{max-width:480px;margin:auto;border:1px solid #ffffff30}.joystick{bottom:28px}}
